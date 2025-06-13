@@ -156,5 +156,6 @@ nginx-https.env
 *.mm
 .mm
 step-by-step.md
+private.md
 
 # Edson Copque | https://linktr.ee/edsoncopque
