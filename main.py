@@ -17,7 +17,7 @@ for x in WIDTH:
     next_cells.append(column)
 
 while True:
-    print("\n\n\n\n")
+    print("\n\n\n\n\n\n")
     current_cells = copy.deepcopy(next_cells)
 
     for y in range(HEIGHT):
