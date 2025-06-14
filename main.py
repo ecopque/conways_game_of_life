@@ -16,6 +16,7 @@ for x in WIDTH:
             column.append(" ")
     next_cells.append(column)
 
+# Print the grid to the screen:
 while True:
     print("\n\n\n\n\n\n")
     current_cells = copy.deepcopy(next_cells)
