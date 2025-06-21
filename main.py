@@ -42,7 +42,34 @@ while True:
         above_coord = (y - 1) % HEIGHT
         # Neighbot below. If it is on the last line, it goes back to the first line.
         below_coord = (y + 1) % HEIGHT
+        
+        num_neighbors = 0
+        if current_cells[left_coord][above_coord] == "#":
+            num_neighbors += 1
+        if current_cells[x][above_coord] == "#":
+            num_neighbors += 1
+        if current_cells[right_coord][above_coord] == "#":
+            num_neighbors += 1
+        if current_cells[left_coord][y] == "#":
+            num_neighbors += 1
+        if current_cells[right_coord][y] == "#":
+            num_neighbors += 1
+        if current_cells[left_coord][below_coord] == "#":
+            num_neighbors += 1
+        if current_cells[x][below_coord] == "#":
+            num_neighbors += 1
+        if current_cells[right_coord][below_coord] == "#":
+            num_neighbors += 1
+ 
+        if current_cells[x][y] == "#" and (num_neighbors == 2 or num_neighbors == 3):
+                next_cells[x][y] = "#"
+        elif current_cells[x][y] == " " and num_neighbors == 3:
+            next_cells[x][y] = "#"
+        else:
+            next_cells[x][y] = " "
+    time.sleep(1)
 
+            
 
 
 
